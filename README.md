@@ -1,17 +1,23 @@
-# tunel_detection
+# Tunel detection
+This is a project for tunel abnormal detection. Suppose there are two videos of the same tunnel, one is a reference video and the other is a test video. The videos are shot at the front of a train (the train speed may be inconsistent) to detect whether certain objects in the tunnel are added, missing, or dislocated.
 
+## key-frame alignment and detection
+`detection_fp1` implement  key frame alignment and detection.
 
-## key frame 匹配和检测
-detection_fp1 实现了  key frame 匹配和检测。  
-可参考以下使用方法：
+### Quick start
+Use below command：：
 ```sh
 cd detection_fp1
 python comparison.py --ref ../Trainingvideos_2_1280_720.mp4 --test ../Test-2_1280_720.mp4
 ```
 
-## 逐帧匹配和检测
-detection_fp30 实现了  key frame 匹配和检测。  
-可参考以下使用方法：
+## alignment and detection frame by frame
+`detection_fp30` implement  alignment and detection frame by frame
+### Demo
+
+
+### Quick start
+Use below command：
 ```sh
 cd detection_fp30
 python comparison.py --ref ../Trainingvideos_2_1280_720.mp4 --test ../Test-2_1280_720.mp4
