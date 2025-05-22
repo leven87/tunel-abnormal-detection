@@ -14,7 +14,7 @@ python comparison.py --ref ../Trainingvideos_2_1280_720.mp4 --test ../Test-2_128
 ## alignment and detection frame by frame
 `detection_fp30` implement  alignment and detection frame by frame
 ### Demo
-![demo](./result/final_comparison_Trainingvideos_2_1280_720_vs_Test-2_1280_720_good2.gif)
+![demo](./results/final_comparison_Trainingvideos_2_1280_720_vs_Test-2_1280_720_good2.gif)
 
 ### Quick start
 Use below command：
