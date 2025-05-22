@@ -1,0 +1,59 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# Default Ultralytics settings for ByteTrack tracker when using mode="track"
+# For documentation and examples see https://docs.ultralytics.com/modes/track/
+# For ByteTrack source code see https://github.com/ifzhang/ByteTrack
+
+# tracker_type: bytetrack # tracker type, ['botsort', 'bytetrack']
+# track_high_thresh: 0.25 # threshold for the first association
+# track_low_thresh: 0.1 # threshold for the second association
+# new_track_thresh: 0.25 # threshold for init new track if the detection does not match any tracks
+# track_buffer: 30 # buffer to calculate the time when to remove tracks
+# match_thresh: 0.8 # threshold for matching tracks
+# fuse_score: True # Whether to fuse confidence scores with the iou distances before matching
+# # min_box_area: 10  # threshold for min box areas(for tracker evaluation, not used for now)
+
+
+tracker_type: bytetrack # tracker type, ['botsort', 'bytetrack']
+track_high_thresh: 0.5 # threshold for the first association
+track_low_thresh: 0.1 # threshold for the second association
+new_track_thresh: 0.6 # threshold for init new track if the detection does not match any tracks
+track_buffer: 30 # buffer to calculate the time when to remove tracks
+match_thresh: 0.7 # threshold for matching tracks
+fuse_score: True # Whether to fuse confidence scores with the iou distances before matching
+# min_box_area: 10  # threshold for min box areas(for tracker evaluation, not used for now)
+max_age: 30 # max age of a track before it is removed
+n_init: 10 # number of frames a track must be detected before it is considered confirmed
+with_reid: True # 是否启用外观模型
+
+
+
+# tracker_type: botsort
+# track_high_thresh: 0.3
+# track_low_thresh: 0.1
+# new_track_thresh: 0.4
+# track_buffer: 90
+# match_thresh: 0.3
+# cmc_method: sparseOptFlow  # 使用稀疏光流法估计相机运动
+# proximity_thresh: 0.5  # 空间距离约束，避免远距离误匹配
+# appearance_thresh: 0.7 # ReID特征相似度阈值（若启用外观模型）
+# with_reid: True # 是否启用外观模型
+# gmc_method: sparseOptFlow # method of global motion compensation
+# fuse_score: False           # 分离检测分数与IOU权重
+# min_confidence: 0.2         # 低分检测仍参与轨迹恢复
+# frame_rate: 30
+# motion_weight: 0.95 # 运动模型权重
+# kalman:
+#   # 过程噪声协方差矩阵 (Q)
+#   # 格式: [位置噪声x, 位置噪声y, 速度噪声x, 速度噪声y]
+#   process_noise: [1.2, 1.2, 0.1, 0.1]
+  
+#   # 测量噪声协方差矩阵 (R)
+#   # 格式: [测量噪声x, 测量噪声y, 速度噪声x, 速度噪声y] 
+#   measurement_noise: [0.5, 0.5, 0.2, 0.2]
+  
+#   # 状态转移矩阵 (F) - 可选高级配置
+#   # state_transition: [[1,0,1,0], [0,1,0,1], [0,0,1,0], [0,0,0,1]]
+  
+#   # 观测矩阵 (H) - 可选高级配置
+#   # observation_matrix: [[1,0,0,0], [0,1,0,0]]
